@@ -1,11 +1,10 @@
-const btnSwitch = document.querySelector("#switch");
+$("#switch").on("click", function(){ 
+    $("body").toggleClass("dark");
+    $(this).toggleClass("active");
 
-$("#switch").click( () => {
-document.body.classList.toggle("dark");
-btnSwitch.classList.toggle("active");
+    //Guardamos el modo en el local storage
 
-//Guardamos el modo en el local storage
-    if(document.body.classList.contains("dark")){
+    if ($("body").contains("dark")){
         localStorage.setItem("dark-mode", "true");
     } else{
         localStorage.setItem("dark-mode", "false");
@@ -13,10 +12,11 @@ btnSwitch.classList.toggle("active");
 });
 
 //Obtenemos el modo actual del local storage
-if(localStorage.getItem("dark-mode") === "true"){
-    document.body.classList.add("dark");
-    btnSwitch.classList.add("active");
-} else{
-    document.body.classList.remove("dark");
-    btnSwitch.classList.remove("active");
+
+if (localStorage.getItem("dark-mode") === "true"){
+    $("body").addClass("dark");
+    $("#switch").addClass("active");
+} else {
+    $("body").removeClass("dark");
+    $("#switch").removeClass("active");
 }

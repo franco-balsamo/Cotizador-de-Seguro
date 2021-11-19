@@ -1,18 +1,23 @@
-$("#nosotros-footer").css("fontSize", "25px");
-$("#nosotros-footer").css("textAlign", "center");
-$("#nosotros-footer").css("marginBottom", "20px");
+// footer 
+$("#footer").css ({ "padding" : "25px 0",
+                    "color" : "#f0f9ff",
+                    "background-color" : "#050505" });
+              
+$("#nosotros-footer").css ({ "font-size": "25px",
+                             "textAlign": "center",
+                             "margin-bottom": "20px" });
 
-$(".parrafo-footer").css("fontSize", "17px");
+$("#parrafo-footer").css("fontSize", "17px");
 
-$("a")[0].textContent = "CAR-SEGUROS";
+$("#footer-redes").css ({  "display": "flex",
+                           "padding-left": "50px",
+                           "padding-top": "40px",
+                           "justify-content": "space-evenly" });
 
+$(".footer-img").css ({ "width": "45px",
+                        "height": "45px" });
+// fin footer
 
-let div = document.getElementById("h1");
-let h1 = document.createElement("h1");
-h1.innerHTML = "Cotiza tu seguro online"
-div.appendChild(h1);
-
-
-
-
-
+// h1 seccion formulario
+$("#h1").prepend("<h1> Cotiza tu seguro online </h1>");
+$("#h1").css("text-align", "center");

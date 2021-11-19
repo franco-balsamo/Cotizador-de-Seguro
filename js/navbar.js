@@ -1,9 +1,7 @@
-let nav = document.querySelector('nav');
-
-window.addEventListener('scroll', function () {
+$(window).on('scroll', function () {
   if (window.pageYOffset > 450) {
-    nav.classList.add('bg-dark', 'shadow');
+    $("nav").addClass('bg-dark', 'shadow');
   } else {
-    nav.classList.remove('bg-dark', 'shadow');
+    $("nav").removeClass('bg-dark', 'shadow');
   }
 });

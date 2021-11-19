@@ -1,12 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
 * {
   scroll-behavior: smooth;
 }
-
 body {
   background:black;
 }
@@ -18,7 +16,6 @@ body {
   font-size: 20px;
   color: black;
 }
-
 .titulos-secciones {
   text-align: center;
   color: white;
@@ -128,8 +125,8 @@ body.dark .titulos-secciones {
 .wrapper-servicios {
   margin: 40px 0;
   text-align: center;
-    border-radius: initial;
-    border: initial;
+  border-radius: initial;
+  border: initial;
 }
 .circle-image {
     width: 60%;
@@ -164,9 +161,6 @@ body.dark .titulo-servicios {
     -webkit-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
     -moz-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
     box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
-}
-#h1{
-  text-align: center;
 }
 #cargando {
     text-align: center;
@@ -247,28 +241,6 @@ body.dark .titulo-servicios {
 
 /*   FIN SECCION FORMULARIO COTIZADOR    */
 
-
-/*    FOOTER    */
-
-.footer__div {
-  padding: 25px 0;
-  color: #f0f9ff;
-  background-color: #050505;
-}
-.footer__redes {
-    display: flex;
-    padding-left: 50px;
-    padding-top: 40px;
-    justify-content: space-evenly;
-}
-.footer__img {
-  width: 45px;
-  height: 45px;
-}
-
-/*   FIN FOOTER   */
-
-
 /*   ANIMACIONES    */
 
 @-webkit-keyframes sk-stretchdelay {
@@ -340,10 +312,10 @@ body.dark .titulo-servicios {
   #resultado {
     margin-bottom: 20px !important;
   }
-  .footer__div{
+  #footer{
     padding: 25px 0;
   }
-  .footer__redes{
+  #footer-redes{
     padding: 0px;
     margin-top: 25px;
   }

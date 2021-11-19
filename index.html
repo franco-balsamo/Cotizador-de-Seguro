@@ -18,7 +18,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3"><!-- Navbar  -->
 
 <div class="container"><!--container navbar-->
-  <a class="navbar-brand font-bold nombre-navbar" href="#">car-seguro</a>
+  <a class="navbar-brand font-bold nombre-navbar" href="#">CAR-SEGUROS</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
   </button>
@@ -51,15 +51,15 @@
 <!-- Banner Image  -->
 <div class="banner-image w-100 vh-100 d-grid align-content-end">
       <div class="content text-center div-banner">
-        <h1 class="font bold banner-h1">CAR-SEGUROS</h1>
-        <p class="banner-parrafo">Contrata tu seguro 100% online</p>
-        <a href="#formulario" id="planes" class=" btn-dark text-white font-bold rounded boton-cotizar">Cotizar ahora</a>
+        <h1 id="h1-banner" class="font-bold banner-h1">CAR-SEGUROS</h1>
+        <p id="p-banner" class="banner-parrafo">Contrata tu seguro 100% online</p>
+        <a id="planes" class=" btn-dark text-white font-bold rounded boton-cotizar">Cotizar ahora</a>
       </div>
 </div>
 
 <main>
 <br>
-<section><!--inicio seccion planes-->
+<section id="seccion-planes"><!--inicio seccion planes-->
 
     <p class="titulos-secciones">Nuestros Planes</p>
     
@@ -71,18 +71,18 @@
           <p><strong>Este plan incluye:</strong></p>
           <br>
           <ul>
-            <li ><span class="text-success">✓</span> Responsabilidad Civil </li>
-            <li><span class="text-success">✓</span> Robo e incendio parcial</li>
-            <li><span class="text-success">✓</span> Incendio, daños y robo total</li>
-            <li><span class="text-success">✓</span> Cristales</li>
-            <li><span class="text-success">✓</span> Cerradura</li>
+            <li><span><i class="fas fa-check"></i></span> Responsabilidad Civil </li>
+            <li><span><i class="fas fa-check"></i> Robo e incendio parcial</li>
+            <li><span><i class="fas fa-check"></i> Incendio, daños y robo total</li>
+            <li><span><i class="fas fa-check"></i> Cristales</li>
+            <li><span><i class="fas fa-check"></i> Cerradura</li>
           </ul>
           <br>
           <p><strong> Este plan no incluye:</strong></p>
           <br>
           <ul>
-            <li><span class="span-rojo">x</span> Granizo</li>
-            <li><span class="span-rojo">x</span> Daños parciales con franquicia</li>
+            <li><span><i class="fas fa-times"></i></span> Granizo</li>
+            <li><span><i class="fas fa-times"></i></span> Daños parciales con franquicia</li>
           </ul>
         </div>
       </div>
@@ -93,13 +93,13 @@
                  <p><strong>Este plan incluye:</strong></p>
                  <br>
                  <ul>
-                   <li><span class="text-success">✓</span> Responsabilidad Civil</li>
-                   <li><span class="text-success">✓</span> Daños parciales con franquicia</li>
-                   <li><span class="text-success">✓</span> Robo e incendio parcial</li>
-                   <li><span class="text-success">✓</span> Incendio, daños y robo total</li>
-                   <li><span class="text-success">✓</span> Cristales</li>
-                   <li><span class="text-success">✓</span> Cerradura</li>
-                   <li><span class="text-success">✓</span> Granizo</li>
+                   <li><span><i class="fas fa-check"></i> Responsabilidad Civil</li>
+                   <li><span><i class="fas fa-check"></i> Daños parciales con franquicia</li>
+                   <li><span><i class="fas fa-check"></i> Robo e incendio parcial</li>
+                   <li><span><i class="fas fa-check"></i> Incendio, daños y robo total</li>
+                   <li><span><i class="fas fa-check"></i> Cristales</li>
+                   <li><span><i class="fas fa-check"></i> Cerradura</li>
+                   <li><span><i class="fas fa-check"></i> Granizo</li>
                  </ul >
              </div>
       </div>
@@ -219,7 +219,7 @@
 </section><!-- fin seccion cotizador-->
 </main><!--fin main-->
 
-<div id="footer" class="footer__div">
+<div id="footer">
 <footer>
 <div class="container">
 
@@ -227,13 +227,13 @@
 
         <div class="col-md-6">
              <h3 id="nosotros-footer">Sobre Nosotros</h3>
-             <p class="parrafo-footer">En CAR-SEGUROS disponemos de Atención al Cliente las 24 hs, Servicio de grúa las 24 hs y además un Sistema de Autogestión en nuestra página web o aplicación móvil para poder gestionar todos tus trámites online.</p>
+             <p id="parrafo-footer">En CAR-SEGUROS disponemos de Atención al Cliente las 24 hs, Servicio de grúa las 24 hs y además un Sistema de Autogestión en nuestra página web o aplicación móvil para poder gestionar todos tus trámites online.</p>
         </div>
          
-        <div class="col-md-6 footer__redes">
-             <a href="https://www.instagram.com/"><img class="footer__img" src="./img/ins_vectorLogo.svg" alt="instagram"></a>
-             <a href="https://es-la.facebook.com/"><img class="footer__img" src="./img/fb_vectorLogo.svg" alt="facebook"></a>
-             <a href="https://web.whatsapp.com/"><img class="footer__img" src="./img/wsp_vectorLogo.svg" alt="whatsapp"></a>
+        <div id="footer-redes" class="col-md-6">
+             <a href="https://www.instagram.com/"><img class="footer-img" src="./img/ins_vectorLogo.svg" alt="instagram"></a>
+             <a href="https://es-la.facebook.com/"><img class="footer-img" src="./img/fb_vectorLogo.svg" alt="facebook"></a>
+             <a href="https://web.whatsapp.com/"><img class="footer-img" src="./img/wsp_vectorLogo.svg" alt="whatsapp"></a>
         </div>
 
     </div><!--fin row-->
@@ -252,6 +252,7 @@
 <script src="js/navbar.js"></script>
 <script src="js/dark-mode.js"></script>
 <script src="js/index.js"></script>
+<script src="js/animaciones.js"></script>
 
 </body>
 </html>
