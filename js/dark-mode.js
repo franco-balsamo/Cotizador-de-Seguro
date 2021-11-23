@@ -4,7 +4,7 @@ $("#switch").on("click", function(){
 
     //Guardamos el modo en el local storage
 
-    if ($("body").contains("dark")){
+    if (document.body.classList.contains("dark")){
         localStorage.setItem("dark-mode", "true");
     } else{
         localStorage.setItem("dark-mode", "false");
