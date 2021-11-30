@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <script src="https://kit.fontawesome.com/613cae0644.js" crossorigin="anonymous"></script>
+    <!--fontawesome-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--libreria aos-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--sweetalert-->
+    <link rel="stylesheet" preload href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CAR-SEGUROS</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="body-image w-auto vh-100">
+<header>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3"><!-- Navbar -->
+  
+  <div class="container"> <!-- Container Navbar -->
+    <a class="font-bold" id="logo-navbar" href="/index.html">CAR-SEGUROS</a>
+  </div> <!--  Fin Container Navbar -->
+  
+</nav> <!-- Fin Navbar -->
+</header> <!-- Fin Header -->
+
+<main class="body-image w-auto vh-100">
+<div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="container  container-usuario"> <!-- Container Usuario -->
+  <div id="contenido-usuario"> <!-- Contenido Usuario -->
+    <div class="btn-dark text-white py-3 font-bold uppercase">
+      <h1 class="text-center"> Registrarme por primera vez</h1>
+    </div>
+    
+    <form action="" class="formulario" id="formulario">
+      
+      <div class="formulario__grupo" id="grupo__usuario">  <!-- Grupo: Usuario -->
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Usuario">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El usuario tiene que ser de 8 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+      </div>  
+      
+      <div class="formulario__grupo" id="grupo__nombre">  <!-- Grupo: Nombre -->
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre y apellido">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+      </div>  
+      
+      <div class="formulario__grupo" id="grupo__password">   <!-- Grupo: Contraseña -->
+          <div class="formulario__grupo-input">
+          <input type="password" class="formulario__input" name="password" id="password" placeholder="Contraseña">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">La contraseña tiene que ser de 8 a 12 dígitos.</p>
+      </div>  
+      
+      <div class="formulario__grupo" id="grupo__password2">  <!-- Grupo: Contraseña 2 -->
+        <div class="formulario__grupo-input">
+          <input type="password" class="formulario__input" name="password2" id="password2" placeholder="Vuelva a ingresar la contraseña">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+      </div>
+      
+      <div class="formulario__grupo" id="grupo__correo">  <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo-input">
+          <input type="email" class="formulario__input" name="correo" id="correo" placeholder="Correo Electronico">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+      </div>
+      
+      <div class="formulario__grupo" id="grupo__telefono">  <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Telefono">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+      </div>
+      
+      <div class="formulario__grupo" id="grupo__terminos">  <!-- Grupo: Terminos y Condiciones -->
+        <label class="formulario__label">
+          <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+          Acepto los Terminos y Condiciones
+        </label>
+      </div>
+      
+      <div class="formulario__mensaje" id="formulario__mensaje">
+        <p class="msj-error"><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+      </div>
+      
+      <div class="formulario__grupo formulario__grupo-btn-enviar">
+        <button type="submit" class="btn-dark hover:bg-grey formulario__btn">Crear usuario</button>
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Usuario creado exitosamente!</p>
+      </div>
+    </form>
+  </div> <!-- Fin Contenido Usuario -->
+</div>   <!-- Fin Container Usuario-->
+</main>
+
+<script>  
+  AOS.init({
+  once: true
+  });
+</script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>-->
+
+<!-- Jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Archivos js-->
+<script src="js/registro.js"></script>
+
+</body>
+</html>

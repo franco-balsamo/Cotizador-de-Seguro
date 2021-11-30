@@ -1,6 +1,4 @@
-
 // FORMULARIO COTIZACION
-
 function Seguro(nombre, dni, patente, marca, year, tipo){
     this.nombre = nombre;
     this.dni = dni;
@@ -9,14 +7,13 @@ function Seguro(nombre, dni, patente, marca, year, tipo){
     this.year =  year;
     this.tipo = tipo;
 }
-
 // realiza cotización
 Seguro.prototype.cotizarSeguro =  function(){
 
 let cantidad;
 const base = 2000;
 
-   switch(this.marca){
+switch(this.marca){
     case 'Fiat':
             cantidad = base * 1.15;
             break;
@@ -37,45 +34,38 @@ const base = 2000;
         break;    
     default:
         break;
-   }
+}
 
-// calcular año
+const diferencia = new Date().getFullYear() - this.year; // calcular año
 
-const diferencia = new Date().getFullYear() - this.year;
-
-// reduccion de costo segun año
-
-cantidad -= ((diferencia * 3) * cantidad)/100;
+cantidad -= ((diferencia * 3) * cantidad)/100;  // reduccion de costo segun año
 
 /*    Multiplicacion segun tipo de cobertura    */
-
-   if(this.tipo === 'terceros-completo'){
-       cantidad *= 1.30;
-   }else{
-        cantidad *= 1.60;
-   }
-
-   return cantidad;
+if(this.tipo === 'terceros-completo'){
+    cantidad *= 1.30;
+}else{
+    cantidad *= 1.60;
+}
+return cantidad;
 }
 
 function UI(){  }
 
 UI.prototype.llenarOpciones = () =>{
-    const max = new Date().getFullYear(),
-          min = max -22;
+const   max = new Date().getFullYear(),
+        min = max -22;
     
-    const selectYear = document.querySelector('#year');
+const selectYear = document.querySelector('#year');
 
-    for(let i = max; i>min; i--){
-        let option =  document.createElement('option');
-        option.value = i;
-        option.textContent = i;
-        selectYear.appendChild(option);
-    }
+for(let i = max; i>min; i--){
+    let option =  document.createElement('option');
+    option.value = i;
+    option.textContent = i;
+    selectYear.appendChild(option);
+}
 }
 
 //  alertas
-
 UI.prototype.mostrarMensaje = (mensaje,tipo) => {
     const div = document.createElement('div');
     if(tipo === 'error'){
@@ -83,12 +73,10 @@ UI.prototype.mostrarMensaje = (mensaje,tipo) => {
     }else{
         div.classList.add('mensaje','correcto');
     }
-    
     div.classList.add('mensaje', 'mt-10');
     div.textContent = mensaje;
 
 // insertar en html
-
 const formulario = document.querySelector('#cotizar-seguro');
 formulario.insertBefore(div, document.querySelector('#resultado'));
 
@@ -98,9 +86,8 @@ setTimeout(() => {
 }
 
 UI.prototype.mostrarResultado = (total,seguro) =>{
-
-const {marca, year, tipo} = seguro;
-let txtMarca;
+    const {marca, year, tipo} = seguro;
+    let txtMarca;
 
     switch(marca){
         case 'Fiat':
@@ -126,7 +113,6 @@ let txtMarca;
     }
 
 // crear el resultado
-
 const div = document.createElement('div');
 div.classList.add('mt-10');
 
@@ -135,13 +121,10 @@ div.innerHTML = `
     <p class='font-bold'> Marca: <span class='font-normal'> ${txtMarca}</span> </p>
     <p class='font-bold'> Año: <span class='font-normal'> ${year}</span> </p>
     <p class='font-bold'> Tipo: <span class='font-normal capitalize'> ${tipo}</span> </p>
-    <p class='font-bold'> Total: <span class='font-normal'> $${total}</span> </p>
-
+    <p class='font-bold'> Valor de Cuota: <span class='font-normal'> $${total}</span> </p>
     `;
 
 const resultadoDiv = document.querySelector('#resultado');
-
-    
 
 // mostrar spinner
 
@@ -157,7 +140,6 @@ spinner.style.display = 'block';
 }
 
 // Instanciar UI
-
 const ui = new UI();
 
 $(document).ready( () => {
@@ -165,9 +147,25 @@ $(document).ready( () => {
 });
 
 const listaCotizacion = [];
+const url = $("#cotizar-seguro").attr("action");
+const metodo = $("#cotizar-seguro").attr("method");
 
-$('#cotizar-seguro').on("submit", function(e) {
+const cotizar = $("#cotizar-seguro");
+
+cotizar.on("submit", function(e) {
     e.preventDefault();
+    $.ajax({
+    url: url,
+    type: metodo,
+    success:function(resp){
+            console.log(resp);
+    },
+    error: function(jqXHL,status,resp){
+            console.log(status);
+            console.log(resp);
+            alert
+    }
+    })
 
     const nombre = $('#nombre').val();
     const dni = $('#dni').val();
@@ -177,7 +175,11 @@ $('#cotizar-seguro').on("submit", function(e) {
     const tipo = $('input[name=tipo]:checked').val();
 
     if(nombre === '' || dni === '' || patente === '' || marca === '' || year === '' || tipo === ''){
-        ui.mostrarMensaje('Completa todos los campos', 'error');
+        Swal.fire({
+            icon: 'error',
+            title: 'Complete los campos vacios',
+            timer: 1500
+        })
         return;
     }
     ui.mostrarMensaje('Cotizando...', 'exito');
@@ -187,13 +189,10 @@ $('#cotizar-seguro').on("submit", function(e) {
         resultados.remove();
     }
     // instanciar seguro
-
     const seguro = new Seguro(nombre, dni, patente, marca, year, tipo);
     const total = seguro.cotizarSeguro();
     // use prototype que va a cotizar
     const final = ui.mostrarResultado(total, seguro);
-
-
 
     if (localStorage.getItem("cotizaciones") ==null) {
         listaCotizacion.push(seguro);

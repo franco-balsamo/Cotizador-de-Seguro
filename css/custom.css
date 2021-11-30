@@ -8,13 +8,20 @@
 body {
   background:black;
 }
-.navbar-light .navbar-brand{
+.navbar-brand{
   color: black;
   font-size: 25px;
 }
-.navbar-nav .nav-item .nav-link {
+.nav-link {
   font-size: 20px;
   color: black;
+}
+#a-icono {
+  padding: 0 8px;
+}
+.icono-cuenta{
+  font-size: 25px;
+  padding: 0 15px;
 }
 .titulos-secciones {
   text-align: center;
@@ -22,133 +29,81 @@ body {
   font-size: 35px;
   margin-bottom: 25px;
   margin-top: 25px;
+  font-family: 'Bebas Neue', cursive;
 }
-
-/*   BOTON DARK MODE   */
-
-.switch {
-  background-color: #050505;
-  border-radius: 1000px;
-  border: none;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  outline: none;
-}
-.switch::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    background: #F1F1F1;
-    top: 0;
-    left: 0;
-    right: unset;
-    border-radius: 100px;
-    transition: .3s ease all;
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-}
-.switch.active {
-    background:yellow;
-    color: black;
-}
-.switch.active::after {
-      right: 0;
-      left: unset;
-}
-.switch span {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    display: block;
-    background: none;
-    color: #fff;
-}
-body.dark {
-      background: white;
-}
-body.dark .titulos-secciones {
-  color: black;
-}
-
-/*   FIN BOTON DARK MODE   */
 
 /*   BANNER   */
-      
+
 .banner-image {
   background-image: url(https://images.unsplash.com/photo-1578265707481-77c0ac3ce8bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80);
   background-size: cover;
+  display: grid;
+  align-content: end;
 }
 .div-banner {
   margin-bottom: 35px;
+  text-align: center;
 }
-.banner-h1 {
+#h1-banner{
   margin-bottom: 100px;
   color: black;
   font-size: 50px;
 }
-.banner-parrafo {
+#p-banner{
   font-size: 25px;
   margin-bottom: 50px;
   color: white;
 }
-.boton-cotizar {
+#boton-banner {
   font-size: 25px;
   padding: 5px 10px;
 }
-
 /*   FIN BANNER   */
 
 /*   SECCION PLANES   */
 
-.container-planes{
+#container-plan{
   justify-content: space-evenly;
 }
-.card-title {
+#h3-plan {
   text-align: center;
   font-size: 25px;
+  font-family: "Bebas Neue";
 }
-.span-rojo{
-  color: red;
-}
-.wrapper-planes {
+#card-plan {
   background-color: #050505;
   color: white;
   padding: 10px;
 }
-
 /*   FIN SECCION PLANES   */
 
 /*   SECCION SERVICIOS    */
 
-.wrapper-servicios {
+#card-servicios {
   margin: 40px 0;
   text-align: center;
   border-radius: initial;
   border: initial;
 }
-.circle-image {
-    width: 60%;
-    height: 200px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    background-color: #919191;
+.img-servicios {
+  width: 60%;
+  height: 200px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  background-color: #919191;
 }    
 .titulo-servicios {
-    font-size: 1.3rem !important;
-    text-align: center;
-    color: white; 
+  font-size: 1.3rem !important;
+  text-align: center;
+  color: white; 
 }
 body.dark .titulo-servicios {
   color: black;
 }
-
 /*    FIN SECCION SERVICIOS    */
-
 
 /*    SECCION FORMULARIO COTIZACION    */
 
@@ -156,18 +111,18 @@ body.dark .titulo-servicios {
   margin-bottom: 50px;
 }
 #contenido-formulario {
-    margin-top: 60px;
-    background-color: white;
-    -webkit-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
-    box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
+  margin-top: 60px;
+  background-color: white;
+  -webkit-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
+  box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
 }
 #cargando {
-    text-align: center;
+  text-align: center;
 }
 #cargando img {
-    display: none;
-    margin: 0 auto;
+  display: none;
+  margin: 0 auto;
 }
 .spinner {
   margin: 100px auto;
@@ -184,19 +139,19 @@ body.dark .titulo-servicios {
   -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
-.spinner .rect2 {
+.rect2 {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
-.spinner .rect3 {
+.rect3 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
 }
-.spinner .rect4 {
+.rect4 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
-.spinner .rect5 {
+.rect5 {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
 }
@@ -209,7 +164,7 @@ body.dark .titulo-servicios {
   color: #F4511E;
 }
 .error p {
-    margin:0;
+  margin:0;
 }
 .correcto {
   background-color: rgb(211, 249, 187);
@@ -220,72 +175,279 @@ body.dark .titulo-servicios {
   color:black;
 }
 #resultado  {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 #resultado div {
-    border: 1px solid black;
-    text-align: center;
-    padding: 0  0 20px 0;
+  border: 1px solid black;
+  text-align: center;
+  padding: 0  0 20px 0;
 }
 #resultado div p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 #resultado div p.div {
-    background-color: black;
-    margin-bottom: 10px;
-    color:white;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
+  background-color: black;
+  margin-bottom: 10px;
+  color:white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-
 /*   FIN SECCION FORMULARIO COTIZADOR    */
 
-/*   ANIMACIONES    */
+/*  INICIO DE SESION   */
 
-@-webkit-keyframes sk-stretchdelay {
-    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
-    20% { -webkit-transform: scaleY(1.0) }
+#container-cuenta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
 }
-  
-@keyframes sk-stretchdelay {
-    0%, 40%, 100% { 
-      transform: scaleY(0.4);
-      -webkit-transform: scaleY(0.4);
-    }  20% { 
-      transform: scaleY(1.0);
-      -webkit-transform: scaleY(1.0);
-    }
+.formulario-cuenta {
+  display: flex;
+  justify-content: center;
+}
+.h1-cuenta {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+#a-formulario {
+  text-align: center;
+  color: white;
+}
+#a-formulario:hover {
+  color: red;
+}
+#input-dni,
+#input-password {
+  margin-bottom: 25px;
+}
+/*  FIN INICIO DE SESION */
+
+/* INICIO SECCION FORMULARIO USUARIO */
+
+.body-image {
+  background-image: url(https://images.unsplash.com/photo-1578265707481-77c0ac3ce8bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80);
+  background-size: cover;
+  display: grid;
+}
+#contenido-usuario {
+  background-color: white;
+  -webkit-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
+  box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
+  padding-bottom: 15px;
+}
+.container-usuario {
+  padding-top: 80px;
+}
+#logo-navbar {
+  color: black;
+  font-size: 25px;
+}
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+  padding: 15px;
+}
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+.formulario__grupo-input {
+	position: relative;
+}
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 1px solid gray;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+.formulario__input-error-activo {
+	display: block;
+}
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+.formulario__checkbox {
+	margin-right: 10px;
+}
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+  text-align: center;
+}
+.formulario__mensaje-activo {
+	display: block;
+}
+.formulario__mensaje p {
+	margin: 0;
+}
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 40%;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+  margin-bottom: 10px;
+}
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+/* FIN SECCION FORMULARIO USUARIO */
+
+/*   BOTON DARK MODE   */
+.switch {
+  background-color: #050505;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background:yellow;
+  color: black;
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+body.dark {
+  background: white;
+}
+body.dark .titulos-secciones {
+  color: black;
+}
+/*   FIN BOTON DARK MODE   */
+
+#footer-redes {
+  padding-top: 40px;
 }
 
 /*   MEDIA QUERY SMARTPHONE   */
 
 @media screen and (max-width: 425px){
- 
-  .navbar-light .navbar-brand{
+  .navbar-brand{
     font-size: 20px;  
   }
-  .navbar-nav .nav-item .nav-link {
+  .nav-link {
     font-size: 16px;     
   }
   .nombre-navbar {
     display: none;
   }
-  .banner-h1 {
-    font-size: 35px;
+  .titulos-secciones {
+    font-size: 30px;
+  }
+  #h1-banner{
+    font-size: 25px;
     margin-bottom: 30px;
   }
-  .banner-parrafo {
+  #p-banner {
     font-size: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
-  .wrapper-planes {
-    margin-bottom: 40px;
+  #card-plan {
+    margin-bottom: 20px;
   }
-  .circle-image {
+  #card-servicios {
+    margin: 20px 0px;
+  }
+  .img-servicios {
     width: 150px;
     height: 150px;
   } 
+  .titulo-servicios {
+    font-size: 25px;
+  }
   #cotizar-seguro{
     padding: 0px 15px;
   }
@@ -312,13 +474,76 @@ body.dark .titulo-servicios {
   #resultado {
     margin-bottom: 20px !important;
   }
+  #container-cuenta {
+    margin-bottom: 50px;
+  }
+  .container-usuario {
+    padding-bottom: 15px;
+  }
+  #formulario {
+    padding-top: 10px;
+  }
+  .formulario__btn {
+    width: 50%;
+  }
+  .h1-cuenta {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  #a-formulario {
+    font-size: 13px;
+  }
   #footer{
     padding: 25px 0;
   }
   #footer-redes{
-    padding: 0px;
+    padding: 0px !important;
     margin-top: 25px;
   }
 }
 
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+    padding: 0px 5px;
+	}
+  .msj-error {
+    font-size: 10px;
+  }
+  .formulario__input {
+    border: 1px solid black;
+  }
+  .formulario-mensaje {
+    padding: 5px;
+  }
 
+	.formulario__grupo-terminos,
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+  .container-usuario {
+    padding-bottom: 15px;
+  }
+  #formulario {
+    padding-top: 10px;
+  }
+}
+
+/*   ANIMACIONES    */
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}

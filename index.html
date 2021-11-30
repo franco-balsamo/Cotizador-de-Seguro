@@ -1,258 +1,244 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!--bootstrap-->
     <script src="https://kit.fontawesome.com/613cae0644.js" crossorigin="anonymous"></script>
     <!--fontawesome-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--libreria aos-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--sweetalert-->
+    <link rel="stylesheet" preload href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>CAR-SEGUROS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/custom.css">
-    
 </head>
+
 <body>
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3"><!-- Navbar  -->
-
-<div class="container"><!--container navbar-->
-  <a class="navbar-brand font-bold nombre-navbar" href="#">CAR-SEGUROS</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-       <div class="mx-auto"></div>
-          <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link font-bold" href="#">HOME</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link font-bold" href="#planes">PLANES</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link font-bold" href="#servicios">SERVICIOS</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link font-bold" href="#footer">NOSOTROS</a>
-              </li>
-          </ul>
-  </div>
-
-  <button class="switch" id="switch">
+<header>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3"><!-- Navbar -->
+  <div class="container"> <!-- Container Navbar -->
+    <a class="navbar-brand font-bold nombre-navbar" href="#">CAR-SEGUROS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="mx-auto"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link font-bold"  id="btn-plan">PLANES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-bold" id="btn-servicios">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-bold" id="btn-nosotros">NOSOTROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-bold" id="a-icono" href="/cuenta.html"><span class="icono-cuenta"><i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+    </div> 
+    <button class="switch" id="switch">
       <span><i class="fas fa-sun"></i></span>   
       <span><i class="fas fa-moon"></i></span>
+  </div> <!--  Fin Container Navbar -->
+</nav> <!-- Fin Navbar -->
 
-</div><!--fin container navbar-->
-</nav>
-
-<!-- Banner Image  -->
-<div class="banner-image w-100 vh-100 d-grid align-content-end">
-      <div class="content text-center div-banner">
-        <h1 id="h1-banner" class="font-bold banner-h1">CAR-SEGUROS</h1>
-        <p id="p-banner" class="banner-parrafo">Contrata tu seguro 100% online</p>
-        <a id="planes" class=" btn-dark text-white font-bold rounded boton-cotizar">Cotizar ahora</a>
-      </div>
-</div>
-
-<main>
+<div class="banner-image w-100 vh-100"><!-- Banner Image  -->
+  <div class="content div-banner">
+    <h1 id="h1-banner" class="font-bold">CAR-SEGUROS</h1>
+    <p id="p-banner">Contrata tu seguro 100% online</p>
+    <a id="boton-banner" class=" btn-dark text-white font-bold rounded">Cotizar ahora</a>
+  </div>
+</div><!-- Fin Banner Image  -->
+</header> <!-- Fin Header -->
+<main> <!-- Inicio Main -->
 <br>
-<section id="seccion-planes"><!--inicio seccion planes-->
-
-    <p class="titulos-secciones">Nuestros Planes</p>
-    
-    <div class="card-group container card-group-container container-planes">
-     
-      <div class="col-sm-4 card-wrapper wrapper-planes">
-        <h3 class="card-title">Terceros Completo</h3>
-        <div class="card-body">
-          <p><strong>Este plan incluye:</strong></p>
-          <br>
-          <ul>
-            <li><span><i class="fas fa-check"></i></span> Responsabilidad Civil </li>
-            <li><span><i class="fas fa-check"></i> Robo e incendio parcial</li>
-            <li><span><i class="fas fa-check"></i> Incendio, daños y robo total</li>
-            <li><span><i class="fas fa-check"></i> Cristales</li>
-            <li><span><i class="fas fa-check"></i> Cerradura</li>
-          </ul>
-          <br>
-          <p><strong> Este plan no incluye:</strong></p>
-          <br>
-          <ul>
-            <li><span><i class="fas fa-times"></i></span> Granizo</li>
-            <li><span><i class="fas fa-times"></i></span> Daños parciales con franquicia</li>
-          </ul>
-        </div>
+<section id="seccion-planes"> <!-- Inicio Seccion Planes -->
+  <p data-aos="fade-right"  data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="titulos-secciones">Nuestros Planes</p>
+  <div id="container-plan" class="card-group container"> <!-- Container Planes -->
+    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" id="card-plan" class="col-sm-4 card-wrapper">  <!-- Card Terceros Completo -->
+      <h3 id="h3-plan" class="card-title">Terceros Completo</h3>
+      <div class="card-body">
+        <p><strong>Este plan incluye:</strong></p>
+        <br>
+        <ul>
+          <li><span><i class="fas fa-check"></i></span> Responsabilidad Civil </li>
+          <li><span><i class="fas fa-check"></i> Robo e incendio parcial</li>
+          <li><span><i class="fas fa-check"></i> Incendio, daños y robo total</li>
+          <li><span><i class="fas fa-check"></i> Cristales</li>
+          <li><span><i class="fas fa-check"></i> Cerradura</li>
+        </ul>
+        <br>
+        <p><strong> Este plan no incluye:</strong></p>
+        <br>
+        <ul>
+          <li><span><i class="fas fa-times"></i></span> Granizo</li>
+          <li><span><i class="fas fa-times"></i></span> Daños parciales con franquicia</li>
+        </ul>
       </div>
-    
-      <div class="col-sm-4 card-wrapper wrapper-planes">
-          <h3 class="card-title">Contra todo riesgo</h3>
-             <div class="card-body">
-                 <p><strong>Este plan incluye:</strong></p>
-                 <br>
-                 <ul>
-                   <li><span><i class="fas fa-check"></i> Responsabilidad Civil</li>
-                   <li><span><i class="fas fa-check"></i> Daños parciales con franquicia</li>
-                   <li><span><i class="fas fa-check"></i> Robo e incendio parcial</li>
-                   <li><span><i class="fas fa-check"></i> Incendio, daños y robo total</li>
-                   <li><span><i class="fas fa-check"></i> Cristales</li>
-                   <li><span><i class="fas fa-check"></i> Cerradura</li>
-                   <li><span><i class="fas fa-check"></i> Granizo</li>
-                 </ul >
-             </div>
+    </div>  <!-- Fin Card Terceros Completo -->
+    <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000" id="card-plan" class="col-sm-4 card-wrapper">  <!-- Card Contra Todo Riesgo -->
+      <h3 id="h3-plan" class="card-title">Contra todo riesgo</h3>
+      <div class="card-body">
+        <p><strong>Este plan incluye:</strong></p>
+        <br>
+        <ul>
+          <li><span><i class="fas fa-check"></i> Responsabilidad Civil</li>
+          <li><span><i class="fas fa-check"></i> Daños parciales con franquicia</li>
+          <li><span><i class="fas fa-check"></i> Robo e incendio parcial</li>
+          <li><span><i class="fas fa-check"></i> Incendio, daños y robo total</li>
+          <li><span><i class="fas fa-check"></i> Cristales</li>
+          <li><span><i class="fas fa-check"></i> Cerradura</li>
+          <li><span><i class="fas fa-check"></i> Granizo</li>
+        </ul >
       </div>
-             
-    </div>
-</section>  <!-- fin seccion planes-->
-
+    </div> <!-- Fin Card Contra Todo Riesgo -->
+  </div>  <!-- Fin Container Planes -->
+</section>  <!-- Fin Seccion Planes -->
 <br id="servicios"><br><br>
-
-
-<section  class="mt-4"> <!-- seccion servicios--> 
-
-<p class="titulos-secciones">Servicios</p>
-
-<div class="card-group container">
-
-      <div class="col-sm-4 card-wrapper wrapper-servicios">
-          <img src="./img/click.png" class="card-img-top rounded-circle circle-image" alt="...">
-          <div class="card-body">
-              <h3 class="card-title titulo-servicios">Contratación 100% online</h3>
-          </div>
+<section  class="mt-4"> <!-- Seccion Servicios --> 
+  <p data-aos="fade-right"  data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="titulos-secciones">Servicios</p>
+  <div class="card-group container"> <!-- Inicio Container Servicios -->
+    <div id="card-servicios" class="col-sm-4 card-wrapper">
+      <img src="./img/click.png" class="card-img-top rounded-circle img-servicios" alt="...">
+      <div class="card-body">
+        <h3 class="card-title titulo-servicios">Contratación 100% online</h3>
       </div>
-
-      <div class="col-sm-4 card-wrapper wrapper-servicios">
-          <img src="./img/icons8-crane-128.png" class="card-img-top rounded-circle circle-image" alt="...">
-          <div class="card-body">
-             <h3 class="card-title titulo-servicios">Auxilio mecánico las 24hs</h3>
-          </div>
+    </div>
+    <div id="card-servicios"  class="col-sm-4 card-wrapper">
+      <img src="./img/icons8-crane-128.png" class="card-img-top rounded-circle img-servicios" alt="...">
+      <div class="card-body">
+        <h3 class="card-title titulo-servicios">Auxilio mecánico las 24hs</h3>
       </div>
-
-      <div class="col-sm-4 card-wrapper wrapper-servicios">
-          <img src="./img/icons8-car-crash-100.png" class="card-img-top rounded-circle circle-image" alt="..."/>
-          <div class="card-body">
-            <h3 class="card-title titulo-servicios">Cobertura ante accidentes</h3>
-          </div>
+    </div>
+    <div id="card-servicios"  class="col-sm-4 card-wrapper">
+      <img src="./img/icons8-car-crash-100.png" class="card-img-top rounded-circle img-servicios" alt="..."/>
+      <div class="card-body">
+        <h3 class="card-title titulo-servicios">Cobertura ante accidentes</h3>
       </div>
-       
-</div><!--fin container servicios-->
-</section><!-- fin seccion servicios-->
-
-<br id="formulario">
-
-<section ><!-- seccion formulario-->
-
-<div class="container mx-auto mb-25 container-formulario"><!--container formulario-->
-<div id="contenido-formulario" class="pb-10"> <!--contenido formulario-->
-<div id="h1" class="btn-dark text-white py-3 font-bold uppercase"></div> <!--titulo cotizador hecho en js-->
-
-<form class="mt-10 max-w-lg mx-auto" action="#" id="cotizar-seguro">
-       <div class="flex items-center mb-3"><!--ingresar nombre-->
-            <label class="font-bold uppercase mr-2 w-20" for="nombre">Nombre</label> 
-            <input type="text" class="flex-1 bg-gray-100 p-2 appearance-none" id="nombre" placeholder="Nombre y apellido" autocomplete="off">
-       </div>
-
-       <div class="flex items-center mb-3"><!--ingresar numero de dni-->
-             <label class="font-bold uppercase mr-2 w-20" for="dni">DNI</label> 
-             <input type="number" class="flex-1 bg-gray-100 p-2 appearance-none" id="dni" placeholder="N° DNI" autocomplete="off">
-       </div>
-       
-       <div class="flex items-center mb-3"><!--ingresar patente-->
-             <label class="font-bold uppercase mr-2 w-20" for="Patente">Patente</label> 
-             <input type="text" class="flex-1 bg-gray-100 py-2 appearance-none" id="patente" placeholder="N° de matricula" autocomplete="off">
-       </div>
-       
-       <div class="flex items-center mb-3"><!--seleccionar marca-->
-             <label class="font-bold  uppercase mr-2 w-20" for="marca">Marca:</label>
-             <select class="flex-1 bg-gray-100 p-3 appearance-none" id="marca">
-                  <option value="">- Seleccionar -</option>
-                  <option value="Fiat">Fiat</option>
-                  <option value="Renault">Renault</option>
-                  <option value="Chevrolet">Chevrolet</option>
-                  <option value="Ford">Ford</option>
-                  <option value="Volkswagen">Volkswagen</option>
-                  <option value="Audi">Audi</option>
-             </select>
-       </div>
-       
-       <div class="flex items-center mb-3"> <!--seleccionar año-->
-             <label class="font-bold  uppercase mr-2 w-20" for="year">Año:</label>
-             <select  class="flex-1 bg-gray-100 p-3 appearance-none" id="year"></select>
-       </div>
-       
-       <fieldset>
-           <legend  class="font-bold  uppercase text-center w-full">Tipo de cobertura</legend>
-
-           <div class="flex justify-around mt-5 elegir-cobertura"><!--seleccionar cobertura-->
-               <div>
-                    <label class="font-bold  uppercase mr-2 terceros-completo">Terceros completo</label>
-                    <input type="radio" name="tipo" value="terceros-completo" checked>
-               </div>
-               <div>
-                    <label class="font-bold  uppercase mr-2">Contra todo riesgo</label>
-                    <input type="radio" name="tipo" value="contra todo riesgo">
-               </div>
-           </div>
-       </fieldset>
-
-       <div id="cargando" class="hidden">
-            <div class="spinner">
-               <div class="rect1"></div>
-               <div class="rect2"></div>
-               <div class="rect3"></div>
-               <div class="rect4"></div>
-               <div class="rect5"></div>
+    </div>
+  </div><!-- Fin Container Servicios -->
+</section><!-- Fin Seccion Servicios -->
+<br id="cotizador">
+<section ><!-- Seccion Cotizador -->
+  <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="container mx-auto mb-25 container-formulario"> <!-- Container Cotizador -->
+    <div id="contenido-formulario" class="pb-10"> <!-- Contenido Cotizador -->
+      <div id="h1" class="btn-dark text-white py-3 font-bold uppercase"></div> <!-- Titulo hecho en JS -->
+      <form class="mt-10 max-w-lg mx-auto" action="/cotizador.php" method="post" id="cotizar-seguro">
+        
+        <div class="flex items-center mb-3"> <!-- Ingresar Nombre -->
+          <label class="font-bold uppercase mr-2 w-20" for="nombre">Nombre</label> 
+          <input type="text" name="nombre" class="flex-1 bg-gray-100 p-2 appearance-none" id="nombre" placeholder="Nombre y apellido" autocomplete="off">
+        </div>
+        
+        <div class="flex items-center mb-3"> <!-- Ingresar DNI -->
+          <label class="font-bold uppercase mr-2 w-20" for="dni">DNI</label> 
+          <input type="number" name="dni" class="flex-1 bg-gray-100 p-2 appearance-none" id="dni" placeholder="N° DNI" autocomplete="off">
+        </div>
+        
+        <div class="flex items-center mb-3"> <!-- Ingresar Patente -->
+          <label class="font-bold uppercase mr-2 w-20" for="Patente">Patente</label> 
+          <input type="text" name="patente" class="flex-1 bg-gray-100 py-2 appearance-none" id="patente" placeholder="N° de matricula" autocomplete="off">
+        </div>
+        
+        <div class="flex items-center mb-3"> <!-- Seleccionar Marca -->
+          <label class="font-bold  uppercase mr-2 w-20" for="marca">Marca:</label>
+          <select class="flex-1 bg-gray-100 p-3 appearance-none" name="marca" id="marca">
+            <option value="">- Seleccionar -</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Renault">Renault</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Ford">Ford</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Audi">Audi</option>
+          </select>
+        </div>     
+        
+        <div class="flex items-center mb-3"> <!-- Seleccionar Año -->
+          <label class="font-bold  uppercase mr-2 w-20" for="year">Año:</label>
+          <select name="year" class="flex-1 bg-gray-100 p-3 appearance-none" id="year"></select>
+        </div>
+        
+        <fieldset> <!-- Seleccionar Cobertura -->
+          <legend class="font-bold  uppercase text-center w-full">Tipo de cobertura</legend>
+          <div class="flex justify-around mt-5 elegir-cobertura">
+            <div>
+              <input type="radio" name="tipo" value="terceros-completo" checked>
+              <label class="font-bold  uppercase mr-2 terceros-completo">Terceros completo</label>
             </div>
-       </div>
-       
-       <div id="resultado"></div>
-       
-       <div class="flex  justify-center py-4 formulario-boton">
-            <button type="submit" class="mx-auto btn-dark hover:bg-grey text-white font-bold py-2 px-20 rounded btn-cotizar">Cotizar Seguro</button>
-       </div>
- 
-</form> 
-</div> <!--fin contenido formulario-->
-</div><!--fin container formulario-->
-</section><!-- fin seccion cotizador-->
-</main><!--fin main-->
+            <div>
+              <input type="radio" name="tipo" value="contra todo riesgo">
+              <label class="font-bold  uppercase mr-2">Contra todo riesgo</label>
+            </div>
+          </div>
+        </fieldset>
+        
+        <div id="cargando" class="hidden"> <!-- Spinner -->
+          <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>  
+        </div>
+        
+        <div id="resultado"></div> <!-- Resultado Cotizacion -->
+        
+        <div class="flex justify-center py-4 formulario-boton">
+          <button type="submit" class="mx-auto btn-dark hover:bg-grey text-white font-bold py-2 px-20 rounded btn-cotizar">Cotizar Seguro</button>
+        </div>
+      </form> 
+    </div> <!-- Fin Contenido Cotizador -->
+  </div>   <!-- Fin Container Cotizador -->
+</section> <!-- Fin Seccion Cotizador -->
+</main>    <!-- Fin Main -->
 
 <div id="footer">
-<footer>
-<div class="container">
-
-    <div class="row">
-
-        <div class="col-md-6">
-             <h3 id="nosotros-footer">Sobre Nosotros</h3>
-             <p id="parrafo-footer">En CAR-SEGUROS disponemos de Atención al Cliente las 24 hs, Servicio de grúa las 24 hs y además un Sistema de Autogestión en nuestra página web o aplicación móvil para poder gestionar todos tus trámites online.</p>
+  <footer>
+    <div class="container"> <!-- Container Footer -->
+      <div class="row"> <!-- Contenido Footer-->
+        <div data-aos="zoom-in-right"  data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="col-md-6">
+          <h3 id="nosotros-footer">Sobre Nosotros</h3>
+          <p id="parrafo-footer">En CAR-SEGUROS disponemos de Atención al Cliente las 24 hs, Servicio de grúa las 24 hs y además un Sistema de Autogestión en nuestra página web o aplicación móvil para poder gestionar todos tus trámites online.</p>
+        </div>         
+        <div data-aos="zoom-in-left"  data-aos-easing="ease-out-cubic" data-aos-duration="2000" id="footer-redes" class="col-md-6">
+          <a href="https://www.instagram.com/"><img class="footer-img" src="./img/ins_vectorLogo.svg" alt="instagram"></a>
+          <a href="https://es-la.facebook.com/"><img class="footer-img" src="./img/fb_vectorLogo.svg" alt="facebook"></a>
+          <a href="https://web.whatsapp.com/"><img class="footer-img" src="./img/wsp_vectorLogo.svg" alt="whatsapp"></a>
         </div>
-         
-        <div id="footer-redes" class="col-md-6">
-             <a href="https://www.instagram.com/"><img class="footer-img" src="./img/ins_vectorLogo.svg" alt="instagram"></a>
-             <a href="https://es-la.facebook.com/"><img class="footer-img" src="./img/fb_vectorLogo.svg" alt="facebook"></a>
-             <a href="https://web.whatsapp.com/"><img class="footer-img" src="./img/wsp_vectorLogo.svg" alt="whatsapp"></a>
-        </div>
-
-    </div><!--fin row-->
-
-</div><!--fin container-->
-</footer>
+      </div> <!-- Fin Contenido Footer -->
+    </div><!-- Fin Container Footer -->
+  </footer>
 </div>
+
+<script>  
+  AOS.init({
+  once: true
+  });
+</script>
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>-->
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<!-- archivos js-->
+<!-- Jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<!-- Archivos js-->
 <script src="js/animaciones.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/scroll.js"></script>
 <script src="js/dark-mode.js"></script>
 <script src="js/index.js"></script>
-<script defer src="js/cotizador.js"></script>
-
+<script src="js/cotizador.js"></script>
 </body>
 </html>
